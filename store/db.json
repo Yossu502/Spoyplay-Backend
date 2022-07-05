@@ -76,6 +76,14 @@
       "_image": "www.stv/img.png-m1.com",
       "_idArtista": 1,
       "_idGenre": "trap"
+    },
+    {
+      "_id": 5,
+      "_title": "Sick mode",
+      "_uri": "www.skc.com",
+      "_duration": "3.59",
+      "_image": "ww.gjosd.com",
+      "_idGenre": "Rap"
     }
   ],
   "playlist": [
@@ -96,6 +104,18 @@
       "_name": "Pop Music 2022",
       "_songs": [],
       "_genre": "Pop"
+    },
+    {
+      "_id": 4,
+      "_name": "string",
+      "_songs": [],
+      "_genre": "string"
+    },
+    {
+      "_id": 5,
+      "_name": "Hard Music",
+      "_songs": [],
+      "_genre": "Rock"
     }
   ],
   "playlist_song": [],
@@ -111,6 +131,12 @@
       "_name": "Playboi carti",
       "_genre": "Rap",
       "_photoProfile": "www.google/pbc.png.com"
+    },
+    {
+      "_id": 5,
+      "_name": "Justin Quiles",
+      "_genre": "latino",
+      "_photoProfile": "www.google/jq.png"
     }
   ]
 }

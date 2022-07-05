@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Spotplay
-  description: 'Es una plataforma de musica y mas...'
+  description: 'Spotplay es una nueva compañía de música online que tiene como objetivo proporcionar mejores relaciones con los artistas y fans. Su producto es Spotplay, una plataforma en la que las personas pueden generar listas de reproducción para sus artistas favoritos y gustos musicales.'
   contact: 
     email: jossugames@gmail.com
   license: 
@@ -15,8 +15,10 @@ tags:
   description: Canciones de la aplicacion
 - name: User
   description: Usuarios de la plataforma
-- name: Playlist
+- name: PlayList
   description: Playlist de usuarios
+- name: Artist
+  description: Son todos los artistas de la plataforma
 components: 
   schemas: 
     Song:
@@ -54,12 +56,83 @@ components:
           type: string
         password:
           type: string
+    PlayList:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        songs:
+          type: string
+        genre:
+          type: string
+    Artist:
+      type: object
+      properties:
+        id: 
+          type: integer
+          format: int64
+        name:
+          type: string
+        genre:
+          type: string
+        photoProfile:
+          type: string
 paths:
+  /song:
+    post:
+      tags:
+      - Song
+      summary: Crea una cancion nueva.
+      operationId: createSong
+      description: Endpoint sirve para la creacion de nuevas canciones, unicamente por usuarios editores.
+      requestBody:
+        description: Ingrese los datos de la cancion a registrar.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Song'
+        required: true
+      responses: 
+        200: 
+          description: Registro exitoso
+          content:
+              application/json:
+                schema: 
+                  $ref: '#/components/schemas/Song'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
+    x-codegen-request-body-name: body
+    get:
+      tags:
+      - Song
+      summary: Obtiene todas las canciones publicadas
+      operationId: getAllSongs
+      description: Endpoint para obtener todas las canciones publicadas
+      responses:
+        200:
+          description: Obtencion de las canciones con exito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Song'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
   /user/singup:
     post: 
       tags:
       - User
-      summary: Crear un usuario
+      summary: Registra un nuevo usuario
       operationId: createUser
       description: Se creara un usuario para uilizarlo en la aplicacion.
       requestBody:
@@ -68,9 +141,6 @@ paths:
           application/json:
             schema: 
               $ref: '#/components/schemas/User'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/User'
         required: true
       responses: 
         200: 
@@ -85,4 +155,98 @@ paths:
         404:
           description:  Not found
           content: {}
-    x-codegen-request-body-name: body  
+    x-codegen-request-body-name: body 
+  /playlist:
+    post:
+      tags: 
+      - PlayList
+      summary: Registra una nueva play list
+      operationId: createPlayList
+      description: Se creara una nueva play list dependiendo el tipo de genero
+      requestBody:
+        description: Ingrese los datos de la play list
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/PlayList'
+        required: true
+      responses: 
+        200: 
+          description: Registro exitoso
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/PlayList'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
+    x-codegen-request-body-name: body
+    get:
+      tags:
+      - PlayList
+      summary: Obtiene todas las play list creadas
+      operationId: getAllPlayList
+      description: Endpoint para obtener todas las play list publicadas
+      responses:
+        200:
+          description: Obtencion de las play list con exito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayList'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
+  /artist:
+    post:
+      tags: 
+      - Artist
+      summary: Registra un nuevo artista
+      operationId: createArtist
+      description: Se creara un artista para utilizar dentro de la aplicacion
+      requestBody:
+        description: Ingrese los datos del artista
+        content:
+          application/json:
+            schema: 
+              $ref: '#/components/schemas/Artist'
+        required: true
+      responses: 
+        200: 
+          description: Registro exitoso
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Artist'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
+    x-codegen-request-body-name: body
+    get:
+      tags:
+      - Artist
+      summary: Obtiene a todos los artistas
+      operationId: getAllArtist
+      description: Endpoint para obtener a todos los artistas de la plataforma
+      responses:
+        200:
+          description: Obtencion de los artista con exito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artist'
+        400:
+          description: bad request
+          content: {}
+        404:
+          description:  Not found
+          content: {}
