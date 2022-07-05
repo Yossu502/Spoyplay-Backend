@@ -1,1 +1,116 @@
-{"user":[{"_id":1,"_username":"Yossu502","_email":"jjjjj@gmail.com","_password":"$2b$10$RZn/6Ha/4Utg2hi44eOleeQk4dgAN9YxnmnHLUVsg9wRRKdWMZ1he"},{"_id":2,"_username":"Yossu502","_email":"jjjjj@gmail.com","_password":"$2b$10$ypMlRmzrkl1pOvNgKp/qTeKtUrwGlZrmYNYRt0qZm.YQmBc/ng8ty"},{"_id":3,"_username":"Pablootss","_email":"nigga@gmail.com","_password":"$2b$10$ak23.oI22eqf5EYMXzKQkelgty2imF3Xe0wuW3anU8E21oh0i8XPa"},{"_id":4,"_username":"admin","_email":"admin@gmail.com","_password":"$2b$10$xu3nBR/3rC3VQMifA9pmX.4a.9KKcgvl5Syostk/bGPhNswERpXOm"},{"_id":5,"_username":"string","_email":"string","_password":"$2b$10$Ub6fQ8G0FXoxVI2w6exoKemkVjO1z50xfVf9/tMvL1BFz2VtmAfUK"},{"_id":6,"_username":"string","_email":"string","_password":"$2b$10$Qth3P288wySMR/anDRxc0OOHyh3pihWOerUIB8QS7QWZXDeCWcVVG"},{"_id":7,"_username":"LUi5","_email":"luis@gmail.com","_password":"$2b$10$T5fd/w58/MvsX9Mi9Kl5Eeyh0s07HBeZwfhiqIRK6KRKzJszrfw3."},{"_id":8,"_username":"string","_email":"string","_password":"$2b$10$QSNiA5MAVDMwv1h1u9gohuXmOBIYVhA/JOG4HQFZcTInhIT900OpS"}],"song":[{"_id":1,"_title":"trademark usa","_uri":"www.play/tua.com","_duration":"4.29","_image":"www.stv/img.png-tua.com","_idArtista":1,"_idGenre":"RAP"},{"_id":3,"_title":"magazine","_uri":"www.play/m1.com","_duration":"5.01","_image":"www.stv/img.png-m1.com","_idArtista":1,"_idGenre":"trap"},{"_id":4,"_title":"magazine","_uri":"www.play/m1.com","_duration":"5.01","_image":"www.stv/img.png-m1.com","_idArtista":1,"_idGenre":"trap"},{"_id":6,"_title":"magazine","_uri":"www.play/m1.com","_duration":"5.01","_image":"www.stv/img.png-m1.com","_idArtista":1,"_idGenre":"trap"}],"playlist":[{"_id":1,"_name":"Trap Music 2020","_songs":[],"_genre":"Trap"},{"_id":2,"_name":"Sad Music 2022","_songs":[],"_genre":"Piano"},{"_id":3,"_name":"Pop Music 2022","_songs":[],"_genre":"Pop"}],"playlist_song":[],"artist":[{"_id":1,"_name":"Drake","_genre":"RAP","_photoProfile":"www.google/drake.png.com"},{"_id":2,"_name":"Bad Bunny","_genre":"Trap-latino","_photoProfile":"www.google/drake.png.com"},{"_id":4,"_name":"Playboi carti","_genre":"Rap","_photoProfile":"www.google/pbc.png.com"}]}
+{
+  "user": [
+    {
+      "_id": 1,
+      "_username": "Yossu502",
+      "_email": "jjjjj@gmail.com",
+      "_password": "$2b$10$RZn/6Ha/4Utg2hi44eOleeQk4dgAN9YxnmnHLUVsg9wRRKdWMZ1he"
+    },
+    {
+      "_id": 2,
+      "_username": "Yossu502",
+      "_email": "jjjjj@gmail.com",
+      "_password": "$2b$10$ypMlRmzrkl1pOvNgKp/qTeKtUrwGlZrmYNYRt0qZm.YQmBc/ng8ty"
+    },
+    {
+      "_id": 3,
+      "_username": "Pablootss",
+      "_email": "nigga@gmail.com",
+      "_password": "$2b$10$ak23.oI22eqf5EYMXzKQkelgty2imF3Xe0wuW3anU8E21oh0i8XPa"
+    },
+    {
+      "_id": 4,
+      "_username": "admin",
+      "_email": "admin@gmail.com",
+      "_password": "$2b$10$xu3nBR/3rC3VQMifA9pmX.4a.9KKcgvl5Syostk/bGPhNswERpXOm"
+    },
+    {
+      "_id": 5,
+      "_username": "string",
+      "_email": "string",
+      "_password": "$2b$10$Ub6fQ8G0FXoxVI2w6exoKemkVjO1z50xfVf9/tMvL1BFz2VtmAfUK"
+    },
+    {
+      "_id": 6,
+      "_username": "string",
+      "_email": "string",
+      "_password": "$2b$10$Qth3P288wySMR/anDRxc0OOHyh3pihWOerUIB8QS7QWZXDeCWcVVG"
+    },
+    {
+      "_id": 7,
+      "_username": "LUi5",
+      "_email": "luis@gmail.com",
+      "_password": "$2b$10$T5fd/w58/MvsX9Mi9Kl5Eeyh0s07HBeZwfhiqIRK6KRKzJszrfw3."
+    },
+    {
+      "_id": 8,
+      "_username": "string",
+      "_email": "string",
+      "_password": "$2b$10$QSNiA5MAVDMwv1h1u9gohuXmOBIYVhA/JOG4HQFZcTInhIT900OpS"
+    }
+  ],
+  "song": [
+    {
+      "_id": 1,
+      "_title": "trademark usa",
+      "_uri": "www.play/tua.com",
+      "_duration": "4.29",
+      "_image": "www.stv/img.png-tua.com",
+      "_idArtista": 1,
+      "_idGenre": "RAP"
+    },
+    {
+      "_id": 3,
+      "_title": "magazine",
+      "_uri": "www.play/m1.com",
+      "_duration": "5.01",
+      "_image": "www.stv/img.png-m1.com",
+      "_idArtista": 1,
+      "_idGenre": "trap"
+    },
+    {
+      "_id": 4,
+      "_title": "magazine",
+      "_uri": "www.play/m1.com",
+      "_duration": "5.01",
+      "_image": "www.stv/img.png-m1.com",
+      "_idArtista": 1,
+      "_idGenre": "trap"
+    }
+  ],
+  "playlist": [
+    {
+      "_id": 1,
+      "_name": "Trap Music 2020",
+      "_songs": [],
+      "_genre": "Trap"
+    },
+    {
+      "_id": 2,
+      "_name": "Sad Music 2022",
+      "_songs": [],
+      "_genre": "Piano"
+    },
+    {
+      "_id": 3,
+      "_name": "Pop Music 2022",
+      "_songs": [],
+      "_genre": "Pop"
+    }
+  ],
+  "playlist_song": [],
+  "artist": [
+    {
+      "_id": 1,
+      "_name": "Drake",
+      "_genre": "RAP",
+      "_photoProfile": "www.google/drake.png.com"
+    },
+    {
+      "_id": 4,
+      "_name": "Playboi carti",
+      "_genre": "Rap",
+      "_photoProfile": "www.google/pbc.png.com"
+    }
+  ]
+}

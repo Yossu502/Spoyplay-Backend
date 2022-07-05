@@ -10,9 +10,9 @@ class ArtistRouter {
   registerRoutes () {
     this._router.post('/', this.handlePostArtist.bind(this))
     this._router.get('/', this.handleGetAllArtist.bind(this))
-    this._router.get('/', this.handleGetOneArtist.bind(this))
+    this._router.get('/one', this.handleGetOneArtist.bind(this))
     this._router.put('/', this.handleUpdateArtist.bind(this))
-    this._router.delete('/', this.handleDeleteSong.bind(this))
+    this._router.delete('/', this.handleDeleteArtist.bind(this))
   }
 
   handlePostArtist (req, res) {
@@ -28,7 +28,9 @@ class ArtistRouter {
   }
 
   handleGetOneArtist (req, res) {
-
+    const artist = req.body
+    const result = this._ctrl.getOneArtist(artist)
+    this._response.succes(req, res, result, this._httpcode.OK)
   }
 
   handleUpdateArtist (req, res) {
@@ -37,8 +39,10 @@ class ArtistRouter {
     this._response.succes(req, res, result, this._httpcode.OK)
   }
 
-  handleDeleteSong (req, res) {
-
+  handleDeleteArtist (req, res) {
+    const artist = req.body
+    const result = this._ctrl.deleteArtist(artist)
+    this._response.succes(req, res, result, this._httpcode.OK)
   }
 }
 

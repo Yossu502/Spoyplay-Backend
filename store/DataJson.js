@@ -55,10 +55,9 @@ export class DataJson {
     return 'Update Item'
   }
 
-  deleteItemTable (table, id) {
+  deleteItemTable (table, atribute, id) {
     const items = this.readJsonFile()
-    items[table] = items[table].filter((item) => item._id !== id)
-    console.log(items)
+    items[table] = items[table].filter((item) => item[atribute] !== id)
     this.writeJsonFile(items)
     return 'Item Deleted'
   }

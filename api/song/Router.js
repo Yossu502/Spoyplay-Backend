@@ -10,8 +10,15 @@ class SongRouter {
   registerRoutes () {
     this._router.post('/', this.handlePostSong.bind(this))
     this._router.get('/', this.handleGetSong.bind(this))
+    this._router.get('/one', this.handleGetOneSong.bind(this))
     this._router.put('/', this.handleUpdateSong.bind(this))
     this._router.delete('/', this.handleDeleteSong.bind(this))
+  }
+
+  handlePostSong (req, res) {
+    const song = req.body
+    const result = this._ctrl.createNewSong(song)
+    this._response.succes(req, res, result, this._httpcode.CREATED)
   }
 
   handleGetSong (req, res) {
@@ -19,26 +26,21 @@ class SongRouter {
     this._response.succes(req, res, result, this._httpcode.OK)
   }
 
-  handlePostSong (req, res) {
+  handleGetOneSong (req, res) {
     const song = req.body
-    console.log(song)
-    const result = this._ctrl.createNewSong(song)
-    this._response.succes(req, res, result, this._httpcode.CREATED)
+    const result = this._ctrl.getOneSong(song)
+    this._response.succes(req, res, result, this._httpcode.OK)
   }
 
   handleUpdateSong (req, res) {
     const song = req.body
-    console.log('Router LOG')
-    console.log(song)
     const result = this._ctrl.updateSong(song)
     this._response.succes(req, res, result, this._httpcode.OK)
   }
 
   handleDeleteSong (req, res) {
-    console.log('ROUTER DELETE LOG')
-    const id = req.body
-    console.log(id)
-    const result = this._ctrl.deleteSong(id)
+    const song = req.body
+    const result = this._ctrl.deleteSong(song)
     this._response.succes(req, res, result, this._httpcode.OK)
   }
 }

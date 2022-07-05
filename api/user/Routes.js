@@ -10,8 +10,6 @@ export default class UserRouter {
 
   registerRoutes () {
     this._router.post('/singup', this._checkUser, this.handleSingUp.bind(this))
-    // this._router.delete('/', this.handleDeleteSong.bind(this))
-    // this._router.put('/', this.handlePutSong.bind(this))
   }
 
   handleSingUp (req, res) {
