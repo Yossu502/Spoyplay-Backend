@@ -15,9 +15,9 @@ class SongRouter {
     this._router.delete('/', this.handleDeleteSong.bind(this))
   }
 
-  handlePostSong (req, res) {
+  async handlePostSong (req, res) {
     const song = req.body
-    const result = this._ctrl.createNewSong(song)
+    const result = await this._ctrl.createNewSong(song)
     this._response.succes(req, res, result, this._httpcode.CREATED)
   }
 
@@ -27,9 +27,22 @@ class SongRouter {
   }
 
   handleGetOneSong (req, res) {
-    const song = req.body
-    const result = this._ctrl.getOneSong(song)
-    this._response.succes(req, res, result, this._httpcode.OK)
+    const { name, id } = req.query
+    console.log(name, id)
+    if (Object.keys(req.query).length === 0) {
+      console.log('No hay')
+    } else {
+      console.log('Si hay')
+    }
+    /*     const song = req.query
+    if (!song.namesong) {
+      console.log('No se envio parametro')
+    } else {
+      console.log(song.namesong)
+    } */
+
+    // const result = this._ctrl.getOneSong(song)
+    this._response.succes(req, res, 'Ok', this._httpcode.OK)
   }
 
   handleUpdateSong (req, res) {

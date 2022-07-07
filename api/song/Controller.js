@@ -11,10 +11,10 @@ class SongController {
     return response
   }
 
-  createNewSong (song) {
+  async createNewSong (song) {
     const newSong = new this._entiy(song)
     console.log(newSong)
-    const respose = this._service.save('song', newSong)
+    const respose = await this._service.insertData('songs', newSong)
     return respose
   }
 
